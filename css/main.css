@@ -1,0 +1,144 @@
+/*-----Alapfelépítés----*/
+	body{
+	font-size: 16px;
+	font-weight: 300;
+	}
+
+
+	*, *::before, *::after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	}
+
+	img{
+	max-width: 100%;
+	}
+/*-----Felépítés----*/
+	body{
+	display: grid;
+	grid-template-areas: 
+		"fejlec"
+		"tartalom"
+		"lablec"
+		
+	;
+	grid-template-rows: max-content 1fr max-content; 	
+	min-height: 100vh;
+	}
+	header{
+	background-color: #000000;
+	grid-area: fejlec;
+	line-height: 5rem;
+
+	}
+	main{
+	background-color: grey;
+	grid-area: tartalom;
+	text-align: center;
+	
+
+	}
+	footer{
+	background-color: #000000;
+	grid-area: lablec;
+	vertical-align: middle;
+	text-align: center;
+	padding: 0.3em;
+	}
+/*-----Átlagos----*/
+	a{
+	text-decoration: none;
+	color: black;
+	
+	}
+/*-----Classok ----*/
+	.kartya{
+	background-color: grey;
+	border: 2px  lightgrey;
+	border-radius: 10px;
+	margin:5px;
+	padding: 5px;
+	}
+	.fbkep{
+	max-width: 2.5%
+
+	}
+	.kartya:hover{
+	background-color: #ffd633;	
+	}
+	.balra{
+		text-align: left;
+	}
+	.jobbra{
+		text-align: right;
+	}
+
+/*-----Szövegtípusok ----*/
+	.csodaszöveg{
+	font-family: 'Original Surfer', cursive;
+	font-size: 20px;
+	color: #cca300;
+	}
+	.szoveg{
+	font-family: 'Original Surfer', cursive;
+	font-size: 20px;
+	color: #cca300;
+	}
+/*-----Munkáim oldal képrendszer ----*/
+	.kepkartya .kep{
+		height: 10rem;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+	.kepkartya .kep img{
+		height: 100%
+		width: 100%;
+		object-fit: contain;
+	}
+	.kepkartya .kep img:hover{
+		-webkit-box-shadow:0 2px 12px 0 #ffd633;
+			-moz-box-shadow: 	0 2px 12px 0 #ffd633;
+			box-shadow: 0 2px 12px 0 #ffd633;
+
+	}
+/*-----Rácsszerkezet ----*/
+		.keret{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(22rem,.1fr));
+			margin-left: 1rem;
+			margin-right: 1rem;
+			grid-gap: :1rem;
+
+		}
+		.keret .kepkartya{
+			margin-top: 2rem;
+			margin-right: 1rem;
+			margin-bottom: 2rem;
+		
+
+		}
+
+/*-----Formázás ----*/		
+
+	.doboz{
+		display: block;
+		background-color: grey;
+		border-radius: .5rem;
+		padding: 1rem;
+	}
+	.doboz2{
+		display: block;
+		background-color: lightgrey;
+		border-radius: .5rem;
+		padding: 1rem;
+	}
+	.alap{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+	box-sizing: border-box;
+	grid-gap: 5%;
+	margin: 3rem 10%;
+
+}
+
